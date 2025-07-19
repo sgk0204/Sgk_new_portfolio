@@ -1,0 +1,31 @@
+/* client/src/components/SectionWrapper.css */
+.section-wrapper {
+  padding: 8rem 0; /* Ample vertical spacing */
+  min-height: 80vh; /* Ensure sections take up good height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -0.03em;
+  color: var(--color-primary-dark);
+}
+
+/* Optional: Add a subtle animation on scroll for section titles */
+.section-wrapper[data-aos="fade-up"] .section-title {
+  /* Example for AOS library, which you'd integrate */
+}

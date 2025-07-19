@@ -1,0 +1,142 @@
+/* client/src/pages/EducationExperience.css */
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--color-border-light);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center; /* Center items for single column */
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-accent-blue);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 4px solid var(--color-primary-light); /* White border around dot */
+}
+
+.timeline-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: calc(50% - 40px); /* Adjust width for card + dot spacing */
+  text-align: left;
+  position: relative;
+  margin: 0 20px; /* Space from the central line */
+}
+
+/* Positioning for left/right alignment */
+.timeline-item:nth-child(odd) .timeline-card {
+  margin-right: calc(50% + 20px); /* Pushes card to the left */
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+  margin-left: calc(50% + 20px); /* Pushes card to the right */
+}
+
+/* Arrow for cards */
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  top: 20px;
+}
+
+.timeline-item:nth-child(odd) .timeline-card::before {
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--color-card-bg);
+  right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-card::before {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--color-card-bg) transparent transparent;
+  left: -10px;
+}
+
+
+.timeline-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-dark);
+}
+
+.timeline-card h4 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card .duration {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.timeline-card ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.timeline-card li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px; /* Move line to the left for mobile */
+    transform: translateX(0);
+  }
+
+  .timeline-item {
+    justify-content: flex-start;
+    padding-left: 40px; /* Space for dot and line */
+  }
+
+  .timeline-dot {
+    left: 20px;
+    transform: translateX(-50%);
+  }
+
+  .timeline-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card {
+    margin-left: 0; /* Remove specific left/right margins */
+  }
+
+  .timeline-card::before {
+    left: -10px; /* Arrow on the left for all cards */
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--color-card-bg) transparent transparent;
+  }
+}

@@ -1,0 +1,44 @@
+/* client/src/pages/About.css */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.about-image {
+  flex: 1;
+  min-width: 250px; /* Ensure image isn't too small */
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px; /* Max size for the image */
+  height: auto;
+  border-radius: 50%; /* Circle image */
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.about-text {
+  flex: 2;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text-dark);
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .about-image img {
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,62 @@
+/* client/src/pages/Achievements.css */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.achievement-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  text-align: center;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.achievement-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-dark);
+}
+
+.achievement-year {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.achievement-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .achievement-card {
+    padding: 2rem;
+  }
+  .achievement-card h3 {
+    font-size: 1.4rem;
+  }
+  .achievement-year {
+    font-size: 0.9rem;
+  }
+  .achievement-card p {
+    font-size: 0.9rem;
+  }
+}

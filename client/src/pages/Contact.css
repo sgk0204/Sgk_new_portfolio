@@ -1,0 +1,77 @@
+/* client/src/pages/Contact.css */
+.contact-content {
+  display: flex;
+  /* Removed gap and align-items: flex-start as there's only one column now */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text within the block */
+  max-width: 800px; /* Constrain width for better readability */
+  margin: 0 auto; /* Center the entire content block */
+}
+
+.contact-info {
+  flex: 1; /* Removed as it's no longer a flex item with others */
+  min-width: unset; /* Remove min-width */
+  width: 100%; /* Take full width of parent */
+}
+
+.opportunities-message {
+  font-size: 1.6rem; /* Increased font size */
+  line-height: 1.6;
+  margin-bottom: 3rem; /* More space below the message */
+  color: var(--color-primary-dark);
+  font-weight: 500; /* Slightly bolder for emphasis */
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row; /* Changed to row for horizontal icons */
+  justify-content: center; /* Center the social links */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 2.5rem; /* Increased gap between icons */
+}
+
+.social-links a {
+  display: flex;
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center icon and text */
+  gap: 0.5rem; /* Smaller gap between icon and text */
+  font-size: 1rem; /* Adjust text size if needed */
+  color: var(--color-primary-dark);
+  transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.social-links a:hover {
+  color: var(--color-accent-blue);
+  transform: translateY(-5px); /* Lift slightly on hover */
+}
+
+.social-links a svg { /* Icon styling */
+  font-size: 2.5rem; /* Larger icon size */
+  color: var(--color-primary-dark); /* Default icon color */
+  transition: color var(--transition-speed);
+}
+
+.social-links a:hover svg {
+  color: var(--color-accent-blue); /* Accent color on hover */
+}
+
+/* Removed all styles related to .contact-form-container, .contact-form, .form-group, input, textarea, submit-button */
+/* if you copied the original contact.css, make sure to delete all of those styles */
+
+
+@media (max-width: 768px) {
+  .opportunities-message {
+    font-size: 1.3rem; /* Adjust for smaller screens */
+    margin-bottom: 2rem;
+  }
+  .social-links {
+    gap: 1.5rem; /* Adjust gap for mobile */
+  }
+  .social-links a {
+    font-size: 0.9rem;
+  }
+  .social-links a svg {
+    font-size: 2rem;
+  }
+}

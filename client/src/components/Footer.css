@@ -1,0 +1,14 @@
+/* client/src/components/Footer.css */
+.footer {
+  padding: 2rem 0;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}

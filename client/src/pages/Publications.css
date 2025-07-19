@@ -1,0 +1,101 @@
+/* client/src/pages/Publications.css */
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Spacing between publication items */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.publication-item {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+}
+
+.publication-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.publication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.publication-header h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.publication-year {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #888;
+  flex-shrink: 0; /* Prevent year from wrapping */
+  margin-left: 1.5rem;
+}
+
+.publication-conference {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.publication-authors {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.publication-link-button {
+  display: inline-block;
+  background-color: var(--color-accent-blue);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all var(--transition-speed);
+  box-shadow: 0 3px 10px rgba(0, 122, 255, 0.2);
+}
+
+.publication-link-button:hover {
+  background-color: #005bb7;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 122, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .publication-item {
+    padding: 1.8rem;
+  }
+  .publication-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .publication-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .publication-year {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+  .publication-conference, .publication-authors {
+    font-size: 0.9rem;
+  }
+  .publication-link-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

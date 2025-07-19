@@ -1,0 +1,61 @@
+/* client/src/pages/Home.css */
+.home-content {
+  text-align: center;
+  color: var(--color-primary-dark);
+}
+
+.hero-title {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.05em;
+}
+
+.hero-title .highlight {
+  background: -webkit-linear-gradient(45deg, var(--color-gradient-start), var(--color-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #666;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background-color: var(--color-accent-blue);
+  color: white;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #005bb7; /* Darker blue on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,146 @@
+/* client/src/pages/Volunteering.css */
+/* Most of the styles can be shared with EducationExperience.css.
+   You can either import EducationExperience.css here or copy-paste
+   and rename the classes to avoid conflicts if you wish to make
+   minor stylistic differences. For simplicity, I'm showing renamed classes. */
+
+.volunteering-timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.volunteering-timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--color-border-light);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.volunteering-timeline-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.volunteering-timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-accent-blue); /* Can be a different color for volunteering */
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 4px solid var(--color-primary-light);
+}
+
+.volunteering-timeline-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: calc(50% - 40px);
+  text-align: left;
+  position: relative;
+  margin: 0 20px;
+}
+
+/* Positioning for left/right alignment */
+.volunteering-timeline-item:nth-child(odd) .volunteering-timeline-card {
+  margin-right: calc(50% + 20px);
+}
+
+.volunteering-timeline-item:nth-child(even) .volunteering-timeline-card {
+  margin-left: calc(50% + 20px);
+}
+
+/* Arrow for cards */
+.volunteering-timeline-card::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  top: 20px;
+}
+
+.volunteering-timeline-item:nth-child(odd) .volunteering-timeline-card::before {
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--color-card-bg);
+  right: -10px;
+}
+
+.volunteering-timeline-item:nth-child(even) .volunteering-timeline-card::before {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--color-card-bg) transparent transparent;
+  left: -10px;
+}
+
+.volunteering-timeline-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-dark);
+}
+
+.volunteering-timeline-card h4 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.volunteering-timeline-card .volunteering-duration {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.volunteering-timeline-card ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.volunteering-timeline-card li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .volunteering-timeline-container::before {
+    left: 20px;
+    transform: translateX(0);
+  }
+
+  .volunteering-timeline-item {
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+
+  .volunteering-timeline-dot {
+    left: 20px;
+    transform: translateX(-50%);
+  }
+
+  .volunteering-timeline-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .volunteering-timeline-item:nth-child(odd) .volunteering-timeline-card,
+  .volunteering-timeline-item:nth-child(even) .volunteering-timeline-card {
+    margin-left: 0;
+  }
+
+  .volunteering-timeline-card::before {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--color-card-bg) transparent transparent;
+  }
+}
