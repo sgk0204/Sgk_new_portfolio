@@ -14,19 +14,19 @@ const Contact = () => {
             I'm always open to new opportunities and collaborations. Feel free to reach out!
           </p>
           <div className="social-links">
-            <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://gopalakrishnasista@gmail.com" target="_blank" rel="noopener noreferrer">
               <FaEnvelope />
-              <span>your.email@example.com</span>
+              <span>gopalakrishnasista@gmail.com</span>
             </a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/sista-gopala-krishna-243019237/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
               <span>LinkedIn</span>
             </a>
-            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/sgk0204" target="_blank" rel="noopener noreferrer">
               <FaGithub />
               <span>GitHub</span>
             </a>
-            <a href="https://instagram.com/your-username" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/gopalakrishna_2004/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
               <span>Instagram</span>
             </a>
