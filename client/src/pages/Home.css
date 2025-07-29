@@ -28,6 +28,14 @@
   margin-right: auto;
 }
 
+/* New: Container for buttons */
+.cta-buttons-container {
+  display: flex; /* Arrange children (buttons) in a row */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 1.5rem; /* Space between the buttons */
+  margin-top: 3rem; /* Add some space above the buttons */
+}
+
 .cta-button {
   background-color: var(--color-accent-blue);
   color: white;
@@ -39,12 +47,35 @@
   cursor: pointer;
   transition: all var(--transition-speed);
   box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+  text-decoration: none; /* Remove underline for the link button */
+  display: inline-flex; /* For better vertical alignment if icons are added */
+  align-items: center; /* For better vertical alignment if icons are added */
+  justify-content: center; /* Center text/content within the button */
 }
 
 .cta-button:hover {
   background-color: #005bb7; /* Darker blue on hover */
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+}
+
+.cta-button:focus { /* Added focus styles for accessibility */
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 3px;
+}
+
+/* New: Styles for the secondary (Download Resume) button */
+.secondary-button {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid var(--color-accent-blue); /* Blue border */
+  color: var(--color-accent-blue); /* Blue text */
+  box-shadow: none; /* No shadow by default */
+}
+
+.secondary-button:hover {
+  background-color: var(--color-accent-blue); /* Blue background on hover */
+  color: white; /* White text on hover */
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3); /* Add shadow on hover */
 }
 
 @media (max-width: 768px) {
@@ -54,8 +85,24 @@
   .hero-subtitle {
     font-size: 1.2rem;
   }
+  .cta-buttons-container { /* Adjust layout for smaller screens */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem; /* Adjust gap for vertical stacking */
+  }
   .cta-button {
     padding: 0.8rem 2rem;
+    font-size: 1rem;
+    width: fit-content; /* Allow buttons to size to content */
+    margin: 0 auto; /* Center buttons when stacked */
+  }
+}
+
+/* Media query for even smaller screens if needed */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
     font-size: 1rem;
   }
 }

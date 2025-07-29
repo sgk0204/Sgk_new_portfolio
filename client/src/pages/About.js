@@ -13,20 +13,8 @@ const About = () => {
         </div>
         <div className="about-text">
           <p>
-           Hi! I'm Sista Gopala Krishna, a Computer Science and Engineering graduate from NIT Andhra Pradesh. I love turning ideas into reality through code and technology.
-          </p>
-          <p>
-            My journey started with simple curiosity – wondering how apps work, how websites are built, and how computers solve problems. This curiosity grew into a passion for creating software that actually helps people. I've worked on everything from mobile apps to research projects, always excited to learn something new.
-          </p>
-          <p>
-            I recently graduated and now work as a Probationary Engineer (E-2) at Bharat Electronics Limited (BEL), where I get to contribute to India's defense technology. It's amazing to see how the coding skills I learned in college now help build systems that protect our country.
-          </p>
-          <p>
-            What drives me? The moment when a complex problem becomes a simple, working solution. Whether I'm building a user-friendly app, solving tricky algorithms, or working on research papers, I enjoy making technology that's both powerful and easy to use. I believe the best software doesn't just work well – it makes people's lives better.
-          </p>
-          <p>
-            When I'm not coding, you'll find me exploring new technologies, participating in coding challenges, or designing graphics. I'm always ready for the next exciting project that pushes me to grow and create something meaningful.
-          </p>
+        I am <strong>Sista Gopala Krishna</strong>, a <strong>Computer Science Engineering</strong> graduate from <strong>NIT Andhra Pradesh</strong>, currently serving as a <strong>Probationary Engineer (E-2)</strong> at <strong>Bharat Electronics Limited (BEL)</strong>. I have hands-on experience in software development, having worked as a Software Developer at <strong>VVF CropDoctor</strong> where I designed <strong>Flutter applications</strong> with secure authentication systems. My technical expertise spans across multiple programming languages including <strong>Java</strong>, <strong>C++</strong>, and <strong>Python</strong>, along with experience in web technologies like <strong>ReactJS</strong>, <strong>NodeJS</strong>, and <strong>databases</strong>. I have strong problem-solving skills and have contributed to research in algorithms, presenting a paper at <strong>ICAMM 2023</strong>. With experience in <strong>full-stack development</strong>, <strong>machine learning</strong>, and <strong>mobile app development</strong>, I am passionate about creating efficient solutions and continuously expanding my technical knowledge in the field of computer science and engineering.
+    </p>
         </div>
       </div>
     </SectionWrapper>
